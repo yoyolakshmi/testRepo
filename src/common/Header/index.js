@@ -1,50 +1,23 @@
 import React, { useContext } from "react";
-import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { DataContext } from "../../App";
-import { brandprimary, brandhighlight, brandviolet } from "../../utils/colors";
-
-const Container = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  align-items: center;
-  background-color: ${brandprimary};
-  user-select: none;
-`;
-
-const HomeIcon = styled.img`
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-`;
-
-const Title = styled.div`
-  color: ${brandhighlight};
-  font-size: 40px;
-  font-family: "sans-serif";
-`;
-
-const Welcome = styled.a`
-  color: ${brandviolet};
-  font-size: 20px;
-  align-self: center;
-  text-decoration: underline;
-  cursor: pointer;
-`;
+import "./styles.scss";
 
 const Header = () => {
   const dataSource = useContext(DataContext);
   return (
-    <Container>
+    <div className="container">
       <Link to={"/"}>
-        <HomeIcon src={dataSource.site.logoImage} />
+        <img src={dataSource.site.logoImage} className="home-icon" />
       </Link>
-      <Title children={dataSource.site.title} />
+      <div className="title"> {dataSource.site.title}</div>
       <Link to={"/profile"}>
-        <Welcome children={`Welcome ${dataSource.profile.firstName}`} />
+        <div
+          children={`Welcome ${dataSource.profile.firstName}`}
+          className="welcome"
+        />
       </Link>
-    </Container>
+    </div>
   );
 };
 

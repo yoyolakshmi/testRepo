@@ -2,8 +2,7 @@ import React, { useContext } from "react";
 import moment from "moment";
 import { useParams } from "react-router-dom";
 import { DataContext } from "../../App";
-import { Container, Title } from "../Home";
-import { Column, Text, Detail as DetailView } from "../Profile";
+import "./styles.scss";
 
 const Detail = () => {
   let { id } = useParams();
@@ -11,23 +10,25 @@ const Detail = () => {
   const details = dataSource.data.features.find((x) => x.id === id);
 
   return (
-    <Container>
-      <Title children={details.properties.place} />
-      <Column>
-        <Text>Title</Text>
-        <DetailView>{details.properties.place}</DetailView>
-        <Text>Magnitude</Text>
-        <DetailView>{details.properties.mag}</DetailView>
-        <Text>Time</Text>
-        <DetailView>{moment(details.properties.time).format("lll")}</DetailView>
-        <Text>Status</Text>
-        <DetailView>{details.properties.status}</DetailView>
-        <Text>Tsunami</Text>
-        <DetailView>{details.properties.tsunami}</DetailView>
-        <Text>Type</Text>
-        <DetailView>{details.properties.type}</DetailView>
-      </Column>
-    </Container>
+    <div className="detail-container">
+      <div className="title">{details.properties.title}</div>
+      <div className="column">
+        <div className="text">Title</div>
+        <div className="detail">{details.properties.title}</div>
+        <div className="text">Magnitude</div>
+        <div className="detail">{details.properties.mag}</div>
+        <div className="text">Time</div>
+        <div className="detail">
+          {moment(details.properties.time).format("lll")}
+        </div>
+        <div className="text">Status</div>
+        <div className="detail">{details.properties.status}</div>
+        <div className="text">Tsunami</div>
+        <div className="detail">{details.properties.tsunami}</div>
+        <div className="text">Type</div>
+        <div className="detail">{details.properties.type}</div>
+      </div>
+    </div>
   );
 };
 

@@ -1,0 +1,17 @@
+.home-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 20px;
+
+    .header {
+      font-size: 16px;
+      padding: 5px;
+      cursor: pointer;
+    }
+  }
+}
