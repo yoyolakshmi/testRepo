@@ -5,7 +5,7 @@ import "./styles.scss";
 const Profile = () => {
   const dataSource = useContext(DataContext);
   return (
-    <div className="profile-container">
+    <div className="profile-components">
       <div className="titlePage">Profile</div>
       <div className="column">
         <div className="profile">

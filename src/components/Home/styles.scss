@@ -1,10 +1,10 @@
 @import "../../utils/colorsv.scss";
-.home-container {
+.home-components {
   display: flex;
   align-items: center;
   flex-direction: column;
 
-  .grid-container {
+  .grid-components {
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
     gap: 10px;

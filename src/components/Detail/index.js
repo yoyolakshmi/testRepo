@@ -10,7 +10,7 @@ const Detail = () => {
   const details = dataSource.data.features.find((x) => x.id === id);
 
   return (
-    <div className="detail-container">
+    <div className="detail-components">
       <div className="titlePage">{details.properties.title}</div>
       <div className="column">
         <div className="text">Title</div>

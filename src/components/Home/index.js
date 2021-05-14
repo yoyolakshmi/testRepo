@@ -69,9 +69,9 @@ const Home = () => {
   }, [gridData]);
 
   return (
-    <div className="home-container">
+    <div className="home-components">
       <div className="titlePage">{dataSouce.data.metadata.title}</div>
-      <div className="grid-container">
+      <div className="grid-components">
         <div onClick={onTitleClickHanlder} className="header">
           Title
         </div>

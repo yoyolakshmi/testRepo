@@ -3,9 +3,9 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Source from "./dataSource.json";
 import Header from "./common/Header";
-import Home from "./container/Home";
-import Profile from "./container/Profile";
-import Detail from "./container/Detail";
+import Home from "./components/Home";
+import Profile from "./components/Profile";
+import Detail from "./components/Detail";
 
 export const DataContext = React.createContext();
 

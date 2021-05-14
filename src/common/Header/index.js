@@ -6,7 +6,7 @@ import "./styles.scss";
 const Header = () => {
   const dataSource = useContext(DataContext);
   return (
-    <div className="container">
+    <div className="components">
       <Link to={"/"}>
         <img src={dataSource.site.logoImage} className="home-icon" />
       </Link>
