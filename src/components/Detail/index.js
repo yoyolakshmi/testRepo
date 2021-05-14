@@ -7,7 +7,7 @@ import "./styles.scss";
 const Detail = () => {
   let { id } = useParams();
   const dataSource = useContext(DataContext);
-  const details = dataSource.data.features.find((x) => x.id === id);
+  const details = dataSource.data.features.find((item) => item.id === id);
 
   return (
     <div className="detail-components">
