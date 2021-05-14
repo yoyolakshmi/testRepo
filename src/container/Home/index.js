@@ -17,11 +17,11 @@ const sortColumn = (a, b) => {
 const Grid = ({ properties, id }) => {
   return (
     <>
-      <Link className="TitleElements" to={"/detail/" + id}>
+      <Link className="titleElements" to={"/detail/" + id}>
         {properties.place}
       </Link>
-      <div className="GridElements">{properties.mag}</div>
-      <div className="GridElements">
+      <div className="gridElements">{properties.mag}</div>
+      <div className="gridElements">
         {moment(properties.time).format("lll")}
       </div>
     </>
