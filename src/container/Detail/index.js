@@ -11,7 +11,7 @@ const Detail = () => {
 
   return (
     <div className="detail-container">
-      <div className="title">{details.properties.title}</div>
+      <div className="titlePage">{details.properties.title}</div>
       <div className="column">
         <div className="text">Title</div>
         <div className="detail">{details.properties.title}</div>

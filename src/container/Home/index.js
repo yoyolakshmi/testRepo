@@ -17,9 +17,13 @@ const sortColumn = (a, b) => {
 const Grid = ({ properties, id }) => {
   return (
     <>
-      <Link to={"/detail/" + id}>{properties.place}</Link>
-      <div>{properties.mag}</div>
-      <div>{moment(properties.time).format("lll")}</div>
+      <Link className="TitleElements" to={"/detail/" + id}>
+        {properties.place}
+      </Link>
+      <div className="GridElements">{properties.mag}</div>
+      <div className="GridElements">
+        {moment(properties.time).format("lll")}
+      </div>
     </>
   );
 };
@@ -66,7 +70,7 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <div className="title">{dataSouce.data.metadata.title}</div>
+      <div className="titlePage">{dataSouce.data.metadata.title}</div>
       <div className="grid-container">
         <div onClick={onTitleClickHanlder} className="header">
           Title

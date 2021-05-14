@@ -6,7 +6,7 @@ const Profile = () => {
   const dataSource = useContext(DataContext);
   return (
     <div className="profile-container">
-      <div className="title">Profile</div>
+      <div className="titlePage">Profile</div>
       <div className="column">
         <div className="profile">
           <img src={dataSource.profile.avatarImage} className="profile-image" />
